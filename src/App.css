@@ -1,0 +1,80 @@
+.App {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #121212 0%, #1a1a1a 100%);
+}
+
+.card-custom {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+}
+
+.btn-custom {
+  background: linear-gradient(45deg, #aa00ff, #8800cc);
+  border: none;
+  color: white;
+  font-weight: 600;
+  padding: 0.75rem 1.5rem;
+  border-radius: 25px;
+  transition: all 0.3s ease;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.btn-custom:hover {
+  background: linear-gradient(45deg, #8800cc, #660099);
+  color: white;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(170, 0, 255, 0.4);
+}
+
+.btn-custom:disabled {
+  background: #666;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-outline-light {
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: white;
+  transition: all 0.3s ease;
+}
+
+.btn-outline-light:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-color: rgba(255, 255, 255, 0.5);
+  color: white;
+}
+
+.text-white-50 {
+  color: rgba(255, 255, 255, 0.5) !important;
+}
+
+/* Animation for weather icons */
+@keyframes weatherFloat {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-5px);
+  }
+}
+
+.weather-icon {
+  animation: weatherFloat 3s ease-in-out infinite;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .card-custom {
+    padding: 1.5rem;
+  }
+
+  .display-4 {
+    font-size: 2rem;
+  }
+}
